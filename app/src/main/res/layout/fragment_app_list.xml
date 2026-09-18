@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <LinearLayout
+        android:id="@+id/app_list_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical">
+
+        <!-- Windows Phone Metro Header -->
+        <TextView
+            android:id="@+id/tv_page_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/title_apps"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="38sp" />
+
+        <!-- Minimalist Metro Search Bar -->
+        <LinearLayout
+            android:id="@+id/search_container"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginBottom="12dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_search_bar"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp">
+
+            <EditText
+                android:id="@+id/et_search_apps"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="@string/search_hint"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textColorHint="?android:attr/textColorSecondary"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:id="@+id/iv_search_clear"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Clear search"
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_app_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:scrollbars="vertical"
+            tools:listitem="@layout/item_app_list" />
+
+    </LinearLayout>
+
+    <!-- Loading Indicator -->
+    <ProgressBar
+        android:id="@+id/pb_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminate="true"
+        android:visibility="gone" />
+
+    <!-- Empty State -->
+    <TextView
+        android:id="@+id/tv_empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-light"
+        android:text="@string/no_apps_found"
+        android:textColor="?android:attr/textColorSecondary"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+</FrameLayout>

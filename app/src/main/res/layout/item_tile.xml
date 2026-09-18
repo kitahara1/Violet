@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tile_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+    android:background="@drawable/bg_tile"
+    android:clickable="true"
+    android:focusable="true">
+
+    <!-- FRONT FACE (App Icon, App Label, and Unread Notification Badge) -->
+    <FrameLayout
+        android:id="@+id/tile_front_face"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/iv_tile_icon"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:contentDescription="@null"
+            android:scaleType="fitCenter" />
+
+        <TextView
+            android:id="@+id/tv_tile_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|start"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="6dp"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            tools:text="Messages" />
+
+        <!-- Notification Badge in bottom-right corner -->
+        <TextView
+            android:id="@+id/tv_tile_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="6dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/bg_tile_badge"
+            android:fontFamily="sans-serif-bold"
+            android:gravity="center"
+            android:minWidth="18dp"
+            android:minHeight="18dp"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:visibility="gone"
+            tools:text="3"
+            tools:visibility="visible" />
+
+    </FrameLayout>
+
+    <!-- BACK FACE (Live Tile Content: Header, Center Big Primary Text, Subtitle) -->
+    <LinearLayout
+        android:id="@+id/tile_back_face"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:visibility="gone"
+        tools:visibility="gone">
+
+        <!-- Top Header e.g. "NOW PLAYING", "MESSAGES", or "CLOCK" -->
+        <TextView
+            android:id="@+id/tv_live_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-medium"
+            android:maxLines="1"
+            android:textAllCaps="true"
+            android:textColor="#CCFFFFFF"
+            android:textSize="10sp"
+            tools:text="NOW PLAYING" />
+
+        <!-- Center primary value e.g. Track Title, or "3", or "22:41" -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_live_primary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:ellipsize="end"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center"
+                android:maxLines="2"
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                tools:text="Song Title" />
+
+        </FrameLayout>
+
+        <!-- Bottom subtitle e.g. Artist • Album, or "3 new notifications" -->
+        <TextView
+            android:id="@+id/tv_live_subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif"
+            android:maxLines="2"
+            android:textColor="#E6FFFFFF"
+            android:textSize="11sp"
+            tools:text="Artist Name" />
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Windows Phone Accent Colors -->
+    <color name="wp_violet">#76359D</color>
+    <color name="wp_cobalt">#0050EF</color>
+    <color name="wp_crimson">#E51400</color>
+    <color name="wp_emerald">#008A00</color>
+    <color name="wp_mango">#F09609</color>
+    <color name="wp_cyan">#1BA1E2</color>
+    <color name="wp_magenta">#D80073</color>
+    <color name="wp_amber">#F0A30A</color>
+
+    <!-- Theme Base Colors -->
+    <color name="wp_dark_background">#000000</color>
+    <color name="wp_dark_text_primary">#FFFFFF</color>
+    <color name="wp_dark_text_secondary">#888888</color>
+    <color name="wp_dark_header_box">#1F1F1F</color>
+
+    <color name="wp_light_background">#FFFFFF</color>
+    <color name="wp_light_text_primary">#000000</color>
+    <color name="wp_light_text_secondary">#767676</color>
+    <color name="wp_light_header_box">#E5E5E5</color>
+
+    <!-- Generic Fallbacks -->
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+</resources>

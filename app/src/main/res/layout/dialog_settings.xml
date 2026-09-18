@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/windowBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/title_settings"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="36sp" />
+
+        <!-- Theme Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/settings_theme_header"
+            android:textAllCaps="true"
+            android:textColor="?android:attr/textColorSecondary"
+            android:textSize="13sp" />
+
+        <RadioGroup
+            android:id="@+id/rg_theme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rb_theme_dark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theme_dark"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/rb_theme_light"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theme_light"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/rb_theme_system"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/theme_system"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="16sp" />
+
+        </RadioGroup>
+
+        <!-- Accent Color Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/settings_accent_header"
+            android:textAllCaps="true"
+            android:textColor="?android:attr/textColorSecondary"
+            android:textSize="13sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_accent_colors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false" />
+
+        <!-- Background / Wallpaper Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/settings_background_header"
+            android:textAllCaps="true"
+            android:textColor="?android:attr/textColorSecondary"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/btn_choose_wallpaper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="sans-serif-medium"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingEnd="16dp"
+                android:text="@string/settings_choose_photo"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/btn_remove_wallpaper"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="sans-serif-light"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="@string/settings_remove_photo"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="16sp"
+                android:visibility="gone"
+                tools:visibility="visible" />
+
+        </LinearLayout>
+
+        <!-- Tile Transparency Section (shown when wallpaper is active) -->
+        <LinearLayout
+            android:id="@+id/ll_transparency_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="vertical"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv_transparency_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/settings_tile_transparency"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="14sp" />
+
+            <SeekBar
+                android:id="@+id/sb_tile_transparency"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:max="100"
+                android:progress="50" />
+
+        </LinearLayout>
+
+        <!-- Parallax Motion Toggle (shown when wallpaper is active) -->
+        <LinearLayout
+            android:id="@+id/ll_parallax_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/settings_parallax_effect"
+                    android:textColor="?android:attr/textColorPrimary"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1dp"
+                    android:fontFamily="sans-serif"
+                    android:text="@string/settings_parallax_desc"
+                    android:textColor="?android:attr/textColorSecondary"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switch_parallax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <!-- Live Tiles Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/settings_live_tiles_header"
+            android:textAllCaps="true"
+            android:textColor="?android:attr/textColorSecondary"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_settings_notification_access"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/settings_notification_access"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_notification_access_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="14sp"
+                tools:text="tap to grant permission for notification badges" />
+
+        </LinearLayout>
+
+        <!-- Security & Privacy Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/settings_security_header"
+            android:textAllCaps="true"
+            android:textColor="?android:attr/textColorSecondary"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_settings_hidden_apps"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/settings_hidden_apps"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/tv_hidden_apps_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="14sp"
+                tools:text="0 apps hidden" />
+
+        </LinearLayout>
+
+        <!-- Default Launcher Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/settings_default_home_header"
+            android:textAllCaps="true"
+            android:textColor="?android:attr/textColorSecondary"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_settings_default_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/settings_set_default_home"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="@string/settings_set_default_home_desc"
+                android:textColor="?android:attr/textColorSecondary"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <!-- About Header -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="6dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/settings_about_header"
+            android:textAllCaps="true"
+            android:textColor="?android:attr/textColorSecondary"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.2"
+            android:text="@string/settings_about_desc"
+            android:textColor="?android:attr/textColorSecondary"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+</ScrollView>

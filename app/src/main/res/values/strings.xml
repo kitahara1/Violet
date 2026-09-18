@@ -1,0 +1,75 @@
+<resources>
+    <string name="app_name">Violet</string>
+    <string name="title_start">Start</string>
+    <string name="title_apps">all apps</string>
+    <string name="title_settings">settings</string>
+    <string name="loading_apps">Loading apps…</string>
+    <string name="no_apps_found">No apps found</string>
+    <string name="search_hint">search apps</string>
+
+    <string name="pin_to_start">pin to start</string>
+    <string name="unpin_from_start">unpin from start</string>
+    <string name="resize_tile">resize</string>
+    <string name="app_info">app info</string>
+    <string name="uninstall">uninstall</string>
+    <string name="hide_app">hide app</string>
+    <string name="app_hidden">App hidden</string>
+    <string name="app_unhidden">App unhidden</string>
+    <string name="tile_pinned">Pinned to Start</string>
+    <string name="tile_unpinned">Unpinned from Start</string>
+
+    <string name="empty_start_title">no tiles pinned</string>
+    <string name="empty_start_subtitle">swipe to all apps to pin your favorite apps to Start</string>
+    <string name="empty_start_button">view all apps ➔</string>
+
+    <string name="settings_theme_header">theme</string>
+    <string name="theme_dark">Dark (OLED black)</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_system">Match Android system</string>
+
+    <string name="settings_accent_header">accent color</string>
+
+    <string name="settings_background_header">background</string>
+    <string name="settings_choose_photo">choose photo</string>
+    <string name="settings_remove_photo">remove photo</string>
+    <string name="settings_tile_transparency">tile transparency</string>
+    <string name="settings_tile_transparency_val">tile transparency: %d%%</string>
+    <string name="settings_parallax_effect">parallax motion</string>
+    <string name="settings_parallax_desc">move background when scrolling tiles</string>
+    <string name="wallpaper_updated">Background updated</string>
+    <string name="wallpaper_removed">Background removed</string>
+    <string name="wallpaper_failed">Failed to load photo</string>
+
+    <string name="adjust_wallpaper">adjust wallpaper</string>
+    <string name="crop_guide_hint">drag &amp; pinch to frame wallpaper</string>
+    <string name="apply">apply</string>
+    <string name="cancel">cancel</string>
+    <string name="saving_wallpaper">Saving wallpaper…</string>
+
+    <string name="settings_live_tiles_header">live tiles</string>
+    <string name="settings_notification_access">notification live tiles</string>
+    <string name="settings_notification_access_enabled">enabled — showing live badges &amp; message previews</string>
+    <string name="settings_notification_access_disabled">tap to grant permission for notification badges</string>
+    <string name="notification_service_label">Violet Live Tiles</string>
+
+    <string name="settings_security_header">security &amp; privacy</string>
+    <string name="settings_hidden_apps">hidden apps</string>
+    <string name="settings_hidden_apps_count">%d apps hidden</string>
+    <string name="no_hidden_apps">no apps hidden</string>
+
+    <string name="enter_pin">enter 4-digit PIN</string>
+    <string name="create_pin">create 4-digit PIN</string>
+    <string name="confirm_pin">confirm your PIN</string>
+    <string name="pin_mismatch">PINs did not match, try again</string>
+    <string name="pin_incorrect">Incorrect PIN</string>
+    <string name="change_pin">change PIN</string>
+    <string name="remove_pin">remove PIN</string>
+    <string name="unhide">unhide</string>
+
+    <string name="settings_default_home_header">default home</string>
+    <string name="settings_set_default_home">set as default launcher</string>
+    <string name="settings_set_default_home_desc">open system settings to select Violet as your default home app</string>
+
+    <string name="settings_about_header">about</string>
+    <string name="settings_about_desc">Violet is an ultra-lightweight Windows Phone Metro launcher. Zero tracking, zero idle background work.</string>
+</resources>

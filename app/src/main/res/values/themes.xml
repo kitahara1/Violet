@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme (Light Mode) with transparent system bars. -->
+    <style name="Theme.Violet" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/wp_violet</item>
+        <item name="colorSecondary">@color/wp_violet</item>
+        <item name="android:windowBackground">@color/wp_light_background</item>
+        <item name="android:textColorPrimary">@color/wp_light_text_primary</item>
+        <item name="android:textColorSecondary">@color/wp_light_text_secondary</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+    </style>
+</resources>
